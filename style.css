@@ -130,8 +130,8 @@ section{
 #welcome_section_nav_cont{
 	/*left: calc(50vw - calc(50em / 2));*/
 	/*top: calc(calc(50vh - calc(32em / 2)) - 4.5em);*/
-	font-size:0.53em;
-margin:auto;
+	font-size:0.7em;
+	margin:auto;
 	/*position:fixed;*/
 	/*top:1vh;*/
 	/*left:50vw;*/
@@ -151,7 +151,7 @@ margin:auto;
 	display:flex;
 	width:100%;
 	position:fixed;
-	background-color: white;
+	background-color: var(--welcome_section_dblue);
 	/*border-bottom: 0.1px solid var(--welcome_section_dblue);*/
 	-webkit-box-shadow: 5px 5px 36px 20px rgba(0,0,0,0.05); 
 		box-shadow: 5px 5px 36px 20px rgba(0,0,0,0.05);
@@ -173,18 +173,15 @@ margin:auto;
 	/*outline:1px solid var(--welcome_section_dblue);*/
 	outline-offset:-1px;
 	text-decoration: none;
-	color: var(--welcome_section_dblue);
 	line-height:2em;
+	color:white;
 }
 .welcome_section_nav_btn:hover{
+	color: var(--welcome_section_dblue);
 	border:none;
-	color:white;
-	background-color: var(--welcome_section_dblue);
+	background-color: white;
 }
-.welcome_section_nav_btn:hover i{color:var(--welcome_section_dblue);}
-.welcome_section_nav_btn i{color:white;
-}
-.welcome_section_nav_arw{color:white}
+.welcome_section_nav_arw{color:var(--welcome_section_dblue)}
 /*+++++++++++++++++++++++++++++++++++++++++++++*/
 
 #welcome_section_circle:hover{
@@ -250,10 +247,6 @@ margin:auto;
 .reenie_beanie{
 	font-family: 'Reenie Beanie', cursive;
 }
-
-@media (max-width:1440px){
-	
-}	
 @media (max-width:770px){
 	.welcome_section_master_font{
 		font-size:7.5px;
@@ -265,6 +258,10 @@ margin:auto;
 	#welcome_section_startproj{
 		font-size:2em;
 
+	}
+	#welcome_section_nav_cont{
+		font-size:0.6em;
+		width:20em;
 	}
 }
 
@@ -575,16 +572,16 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 
 #work_section_topbtn_cont{
 	position:fixed;
-	font-size:1em;
 	margin-left:0px;
-	/*background-color:yellow;*/
-	/*margin-right:5em;*/
+/*	background-color:yellow;
+*/	/*margin-right:5em;*/
 	/*margin-bottom:1em;*/
 	z-index:100;
 }
 #work_section_topbtn{
-	padding-left:;
-	font-size:0.53em;
+	line-height:2em;
+	padding-left:1em;
+	font-size:1em;
 	color:var(--hyperlink_blue);
 	width:fit-content;
 }
@@ -691,7 +688,12 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 	margin-left:auto;
 	margin-right:0.3em;
 	margin-bottom:1em;
-}
+	padding-top:0.2em;
+	}
+
+	#work_section_topbtn{
+	font-size:0.6em;
+	}
 }
 
 
@@ -793,6 +795,7 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 	margin-bottom:0.5em;
 	letter-spacing:-0.05em;
 	line-height:0.7em;
+	padding:0px 15px 0px 15px;
 	/*background-color:yellow;*/
 }
 
@@ -857,7 +860,7 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 	background-color:var(--welcome_section_dblue);
 	display:flex;
 	flex-direction:column;
-	overflow-y:hidden;
+	overflow:hidden;
 }
 
 #contact_section_bg{
@@ -868,26 +871,26 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 	line-height:0.8em;
 }
 #contact_section_cont{
+	margin-bottom:1em;
+	display:flex;
+	flex-direction:column;
 	color:white;
 	font-size:6em;
 	width:fit-content;
-	height:0em;
 	margin:auto;
+	margin-bottom:1em;
 	text-align:center;
 }
 #contact_desc{
+	display:flex;
+	flex-direction: column;
 	position:relative;
 	z-index:2 !important;
-	height:2.6em;
 	margin:auto;
 	margin-bottom:0px;
-	line-height:2.4em;
-/*	background-color: white;
-*/}
+}
 #contact_sub{
-	font-size:0.6em;
-	position: relative;
-	bottom:2.8em;
+	font-size:0.3em;
 }
 .contact_dot{
 	background-color: white;
@@ -899,21 +902,22 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 #contact_dots{
 	z-index: 1;
 	display:flex;
-	height:100px;
 	width:100px;
 	width:fit-content;
 	margin:auto;
-	margin-top:0px;
+	margin-top:25px;
 	grid-gap:10px;
 	margin-bottom:0px;
 
 }
 #contact_details_cont{
+	display:flex;
 	z-index:2 !important;
 	margin:auto;
-	margin-top:2em;
+	margin-top:1em;
 	width:fit-content;
 	display:flex;
+	flex-wrap: wrap;
 	grid-gap:15px;
 }
 .contact_link:hover{
@@ -931,6 +935,12 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 .fab, .fas{
 	font-size:3em;
 }
+#contact_content_cont{
+	position:relative;
+	z-index:1;
+	margin:auto;
+	bottom:3em;
+}
 @media (max-width:750px){
 
 	#contact_section_cont{
@@ -938,6 +948,9 @@ a{text-decoration:none;color:var(--hyperlink_blue);|}
 	}
 	#contact_section_bg{
 		font-size:11em;
+	}
+	#contact_content_cont{
+		bottom: 2em;
 	}
 }
 
